@@ -1,1 +1,20 @@
-<p>header works!</p>
+<div class="parentdiv">
+    <div class="sidebar">
+        <div class="menu">
+          <h4>Dashboard</h4>
+          <a routerLink="dashboard">Home</a>
+          <a routerLink="users">Users</a>
+          <a routerLink="create-incident">Create New Incident</a>
+          <a routerLink="incidents-list">Incident List</a>
+        </div>
+        <div class="user-info">
+          <p>Logged in as: <strong>{{loggedUserData.userName}}</strong></p>
+          <button type="button" class="btn btn-danger" (click)="onLogOff()">Log Off</button>
+        </div>
+      </div>
+      
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    
+</div>
